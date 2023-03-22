@@ -1,4 +1,4 @@
-package dsa.arrays.searching;
+package dsa.arrays;
 
 public class Sorting {
 
