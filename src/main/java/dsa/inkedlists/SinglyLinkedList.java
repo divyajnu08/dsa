@@ -162,6 +162,33 @@ class LinkedList{
 			
 			
 		}
+		
+		public void deleteList() {
+			Node p=head;
+			head=head.next;
+			head=null;
+		}
+		
+		public int getNth(int N) {
+			Node p=head;
+			while(N-->0) {
+				p=p.next;
+			}
+			return p.data;
+		}
+		
+		public int getNthFromEnd(int N) {
+		  Node p=head,q=p;
+		  while(N-1>0) {
+			  p=p.next;
+			  N--;
+		  }	
+		  while(p.next!=null) {
+			  q=q.next;
+			  p=p.next;
+		  }
+		  return q.data;
+		}
 	}
 	
 	public class SinglyLinkedList {	
@@ -193,6 +220,15 @@ class LinkedList{
         llist.printList();
         llist.delete(8);
         llist.printList();
+        llist.deleteList();
+        llist.printList();
+        llist.append(6);
+		llist.push(7);
+		llist.push(1);
+		llist.append(4);
+		llist.printList();
+		System.out.println(llist.getNth(1));
+		System.out.println(llist.getNthFromEnd(2));
 	}
 
 }
